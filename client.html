@@ -2,7 +2,6 @@
 <html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Client</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<meta name="description" content="Примеры красивого оформления форм на сайте">
 <style>
 body {background: #f69a73}
 .decor {
@@ -101,6 +100,13 @@ body {background: #f69a73}
   font-size: 24px;
   color: #707981;
 }
+.item {
+  display: flex;
+  flex-direction: column;
+}
+.item input{
+  display: flex;
+}
 @media(max-width:480px){
 .form-left-decoration, 
 .form-right-decoration, 
@@ -117,6 +123,18 @@ body {background: #f69a73}
   <div class="form-inner">
     <h3>Получить файл</h3>
     <input name="name_file" type="text" placeholder="Название файла">
+    <h3>Кількість данних:</h3>
+    <input name="count" type="text" placeholder="Кількість">
+    <h3>Виберіть критерії формування документу:</h3>
+    <div class="item">
+      Ім'я <input type="checkbox" name="option1" value="true">
+      Прізвище <input type="checkbox" name="option2" value="true">
+      Підрозділ <input type="checkbox" name="option3" value="true">
+      Посада <input type="checkbox" name="option4" value="true">
+      Корпус <input type="checkbox" name="option5" value="true">
+      Номер робочої кімнати <input type="checkbox" name="option6" value="true">   
+    </div>
+
     <input type="submit" value="Отправить"> 
   </div>
 </form>
